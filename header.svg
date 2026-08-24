@@ -1,0 +1,225 @@
+<svg width="100%" height="260" viewBox="0 0 1000 260" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+
+    <!-- Dark background -->
+    <linearGradient id="background" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B12"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#06080D"/>
+    </linearGradient>
+
+    <!-- Blue glow -->
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path
+        d="M40 0H0V40"
+        fill="none"
+        stroke="#FFFFFF"
+        stroke-opacity="0.035"
+      />
+    </pattern>
+
+    <!-- Text animation -->
+    <style>
+      .title {
+        animation: glow 3s ease-in-out infinite;
+      }
+
+      .subtitle {
+        animation: fade 3s ease-in-out infinite;
+      }
+
+      @keyframes glow {
+        0%, 100% {
+          opacity: 0.85;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        0%, 100% {
+          opacity: 0.55;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
+
+  </defs>
+
+
+  <!-- Background -->
+  <rect width="1000" height="260" fill="url(#background)"/>
+
+  <!-- Grid -->
+  <rect width="1000" height="260" fill="url(#grid)"/>
+
+
+  <!-- Blue ambient glow -->
+  <ellipse
+    cx="500"
+    cy="125"
+    rx="300"
+    ry="90"
+    fill="#2563EB"
+    opacity="0.06"
+    filter="url(#glow)"
+  />
+
+
+  <!-- Animated scanning line -->
+  <rect
+    x="0"
+    y="0"
+    width="3"
+    height="260"
+    fill="#60A5FA"
+    opacity="0.35"
+  >
+    <animate
+      attributeName="x"
+      from="-10"
+      to="1010"
+      dur="6s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+
+  <!-- Corner decorations -->
+  <path
+    d="M35 55V30H60"
+    fill="none"
+    stroke="url(#blue)"
+    stroke-width="2"
+  />
+
+  <path
+    d="M965 55V30H940"
+    fill="none"
+    stroke="url(#blue)"
+    stroke-width="2"
+  />
+
+  <path
+    d="M35 205V230H60"
+    fill="none"
+    stroke="url(#blue)"
+    stroke-width="2"
+  />
+
+  <path
+    d="M965 205V230H940"
+    fill="none"
+    stroke="url(#blue)"
+    stroke-width="2"
+  />
+
+
+  <!-- Small decorative dots -->
+  <circle cx="100" cy="90" r="2" fill="#60A5FA">
+    <animate
+      attributeName="opacity"
+      values="0.2;1;0.2"
+      dur="2.5s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+  <circle cx="900" cy="170" r="2" fill="#60A5FA">
+    <animate
+      attributeName="opacity"
+      values="1;0.2;1"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </circle>
+
+
+  <!-- Main name -->
+  <text
+    class="title"
+    x="500"
+    y="125"
+    text-anchor="middle"
+    font-family="Segoe UI, Inter, Arial, sans-serif"
+    font-size="62"
+    font-weight="700"
+    letter-spacing="8"
+    fill="#F8FAFC"
+  >
+    ZORVEX
+  </text>
+
+
+  <!-- Blue underline -->
+  <rect
+    x="390"
+    y="145"
+    width="220"
+    height="2"
+    rx="1"
+    fill="url(#blue)"
+  >
+    <animate
+      attributeName="width"
+      values="160;220;160"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+
+    <animate
+      attributeName="x"
+      values="420;390;420"
+      dur="3s"
+      repeatCount="indefinite"
+    />
+  </rect>
+
+
+  <!-- Subtitle -->
+  <text
+    class="subtitle"
+    x="500"
+    y="185"
+    text-anchor="middle"
+    font-family="Segoe UI, Inter, Arial, sans-serif"
+    font-size="17"
+    letter-spacing="4"
+    fill="#94A3B8"
+  >
+    LEARNING AS I GO
+  </text>
+
+
+  <!-- Bottom line -->
+  <line
+    x1="180"
+    y1="230"
+    x2="820"
+    y2="230"
+    stroke="url(#blue)"
+    stroke-width="1"
+    opacity="0.35"
+  />
+
+</svg>
