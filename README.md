@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./header.svg" alt="Zorvex Header">
+  <img src="./header.svg" alt="Temitope Header">
 </p>
 
 <p align="center">
