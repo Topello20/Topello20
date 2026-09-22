@@ -1,70 +1,164 @@
-<svg width="100%" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg"> 
- 
-  <defs> 
- 
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"> 
-      <stop offset="0%" stop-color="#05070B"/> 
-      <stop offset="50%" stop-color="#0B101A"/> 
-      <stop offset="100%" stop-color="#040509"/> 
-    </linearGradient> 
- 
-    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%"> 
-      <stop offset="0%" stop-color="#2563EB"/> 
-      <stop offset="50%" stop-color="#60A5FA"/> 
-      <stop offset="100%" stop-color="#2563EB"/> 
-    </linearGradient> 
- 
-    <linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="0%"> 
-      <stop offset="0%" stop-color="#E2E8F0"/> 
-      <stop offset="50%" stop-color="#FFFFFF"/> 
-      <stop offset="100%" stop-color="#CBD5E1"/> 
-    </linearGradient> 
- 
-    <filter id="glow"> 
-      <feGaussianBlur stdDeviation="7" result="blur"/> 
-      <feMerge> 
-        <feMergeNode in="blur"/> 
-        <feMergeNode in="SourceGraphic"/> 
-      </feMerge> 
-    </filter> 
- 
-    <filter id="softGlow"> 
-      <feGaussianBlur stdDeviation="18"/> 
-    </filter> 
- 
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"> 
-      <path 
-        d="M50 0H0V50" 
-        fill="none" 
-        stroke="#FFFFFF" 
-        stroke-opacity="0.025" 
-      /> 
-    </pattern> 
- 
-    <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%"> 
-      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/> 
-      <stop offset="45%" stop-color="#60A5FA" stop-opacity="0.15"/> 
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1"/> 
-      <stop offset="55%" stop-color="#60A5FA" stop-opacity="0.15"/> 
-      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/> 
-    </linearGradient> 
- 
-    <clipPath id="textClip"> 
-      <text 
-        x="500" 
-        y="154" 
-        text-anchor="middle" 
-        font-family="Segoe UI, Inter, Arial, sans-serif" 
-        font-size="68" 
-        font-weight="700" 
-        letter-spacing="9" 
-      > 
-        TEMITOPE 
-      </text> 
-    </clipPath> 
- 
-    <style> 
- 
+<svg width="100%" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmZmNjY2M1My1kZWZmLTQwZWMtOTk2NS04ZWE2OGQ1OTMzODEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaHauJS3edXqoGkHr3RGWlSAAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo3MWNiY2Y4Mi1jNTcyLTQzMjQtOThkNy1kYWEyOGZiYzJhZmRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo+OgCsT9YDHLgMouMC0efUwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggu84cR++0uOXmi4G+RAu7vimvoiwd9t7yLy+dPgqAM9KkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOHLRBI3IXejaq3C5aVIDn0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCANccB2fsCyCD6XxVtX63ww7uIohpw6n1XDdLMgO1XYg2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiYZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmZmY2NjYzUzLWRlZmYtNDBlYy05OTY1LThlYTY4ZDU5MzM4MS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQ0NGVmNTU0LTJkNTYtNDQ5NS1iNTliLTg2YTE0MjgzNmY3YXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCC7zhxH77S45eaLgb5EC7u+Ka+iLB323vIvL50+CoAz0qJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggmopx0vTFVsXE8I5dG/jkUdabGVlYDOWTfcDdCx8D31WiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggEVq96KImsn+PjOEMrIoZDMDluo2Yc2kf8B5Mf1G9X2V0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCMdtusrwCHgbdJ+0uJjdKxx+TpDxs7u4v4WMbyMO4kWFznlVqcnJ0ka71KSI53M1VoFrGk6vklp6zMB7K9DgEg=</c2pa:manifest></metadata>
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070B"/>
+      <stop offset="50%" stop-color="#0B101A"/>
+      <stop offset="100%" stop-color="#040509"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="50%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#60A5FA" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#60A5FA" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#FFFFFF" stroke-opacity="0.025"/>
+    </pattern>
+    <style>
+      .particle1 { animation: particle 3s ease-in-out 0.3s infinite; }
+      .particle2 { animation: particle 4s ease-in-out 0.6s infinite; }
+      .particle3 { animation: particle 3.5s ease-in-out 0.9s infinite; }
+      .indicator { animation: blink 2s ease-in-out infinite; }
+      @keyframes particle {
+        0%, 100% { opacity: 0.15; transform: translateY(0); }
+        50% { opacity: 0.9; transform: translateY(-7px); }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 0.25; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+
+  <rect width="1000" height="300" fill="url(#bg)"/>
+  <rect width="1000" height="300" fill="url(#grid)"/>
+  <ellipse cx="500" cy="140" rx="330" ry="105" fill="#2563EB" opacity="0.055" filter="url(#softGlow)"/>
+
+  <circle class="particle1" cx="145" cy="108" r="2" fill="#60A5FA"/>
+  <circle class="particle2" cx="850" cy="92" r="1.5" fill="#93C5FD"/>
+  <circle class="particle3" cx="790" cy="222" r="2" fill="#60A5FA"/>
+  <circle cx="210" cy="222" r="1" fill="#60A5FA" opacity="0.35"/>
+  <circle cx="890" cy="150" r="1" fill="#93C5FD" opacity="0.4"/>
+
+  <line x1="160" y1="268" x2="840" y2="268" stroke="url(#blue)" stroke-width="1" opacity="0.18"/>
+  <path d="M70 248V258H80" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.45"/>
+  <path d="M930 248V258H920" fill="none" stroke="#2563EB" stroke-width="1" opacity="0.45"/>
+
+  <g font-family="Segoe UI, Inter, Arial, sans-serif" fill="#64748B">
+    <text x="72" y="32" font-size="10" letter-spacing="3">01 / PROFILE</text>
+    <text x="72" y="46" font-size="8" letter-spacing="2" fill="#334155">IDENTITY</text>
+    <text x="928" y="32" text-anchor="end" font-size="10" letter-spacing="3">2026</text>
+    <text x="928" y="46" text-anchor="end" font-size="8" letter-spacing="2" fill="#334155">BUILDING</text>
+  </g>
+
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <circle class="indicator" cx="463" cy="252" r="2.5" fill="#60A5FA"/>
+    <text x="474" y="255" font-size="8" letter-spacing="2" fill="#64748B">BUILDING</text>
+  </g>
+
+<rect x="112" y="92" width="716" height="92" rx="6" fill="none" stroke="#1E3A5F" stroke-width="1" opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.4144;0.4219;0.6987;0.7062;0.9718;0.9793;1" values="0.5;0.5;0;0;0.5;0.5;0;0" calcMode="linear" /></rect>
+<g id="dotted">
+<g opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.0374;0.0405;0.4426;0.4511;0.4596;0.4681;0.4765;0.4878;0.4991;0.656;0.6645;0.6701;0.6786;0.6871;0.6955;0.7125;0.9329;0.9354;1" values="0;0;1;1;0.55;0.85;0.2;0.6;0.1;0;0;0.45;0.05;0.75;0.25;0.9;1;1;0;0" calcMode="linear" />
+<rect x="177" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="189" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="201" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="201" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="201" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="201" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="201" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="201" y="157" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="201" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="213" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="225" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+</g>
+<g opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.1007;0.1038;0.4426;0.4511;0.4596;0.4681;0.4765;0.4878;0.4991;0.656;0.6645;0.6701;0.6786;0.6871;0.6955;0.7125;0.8947;0.8972;1" values="0;0;1;1;0.55;0.85;0.2;0.6;0.1;0;0;0.45;0.05;0.75;0.25;0.9;1;1;0;0" calcMode="linear" />
+<rect x="261" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="261" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="261" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="261" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="261" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="261" y="157" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="261" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="273" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="273" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="273" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="285" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="285" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="285" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="297" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="297" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="297" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="309" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="309" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+</g>
+<g opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.1476;0.1507;0.4426;0.4511;0.4596;0.4681;0.4765;0.4878;0.4991;0.656;0.6645;0.6701;0.6786;0.6871;0.6955;0.7125;0.8646;0.8671;1" values="0;0;1;1;0.55;0.85;0.2;0.6;0.1;0;0;0.45;0.05;0.75;0.25;0.9;1;1;0;0" calcMode="linear" />
+<rect x="345" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="345" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="345" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="345" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="345" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="345" y="157" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="345" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="357" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="369" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="369" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="381" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="393" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="393" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="393" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="393" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="393" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="393" y="157" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="393" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+</g>
+<g opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.1888;0.1919;0.4426;0.4511;0.4596;0.4681;0.4765;0.4878;0.4991;0.656;0.6645;0.6701;0.6786;0.6871;0.6955;0.7125;0.8365;0.839;1" values="0;0;1;1;0.55;0.85;0.2;0.6;0.1;0;0;0.45;0.05;0.75;0.25;0.9;1;1;0;0" calcMode="linear" />
+<rect x="441" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="441" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="453" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="453" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="453" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="453" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="453" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="453" y="157" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="453" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="465" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="465" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+</g>
+<g opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.2292;0.2323;0.4426;0.4511;0.4596;0.4681;0.4765;0.4878;0.4991;0.656;0.6645;0.6701;0.6786;0.6871;0.6955;0.7125;0.8084;0.8109;1" values="0;0;1;1;0.55;0.85;0.2;0.6;0.1;0;0;0.45;0.05;0.75;0.25;0.9;1;1;0;0" calcMode="linear" />
+<rect x="513" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="525" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="537" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="537" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="537" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="537" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="537" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="537" y="157" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="537" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="549" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+<rect x="561" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+</g>
+<g opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.2784;0.2815;0.4426;0.4511;0.4596;0.4681;0.4765;0.4878;0.4991;0.656;0.6645;0.6701;0.6786;0.6871;0.6955;0.7125;0.7782;0.7807;1" values="0;0;1;1;0.55;0.85;0.2;0.6;0.1;0;0;0.45;0.05;0.75;0.25;0.9;1;1;0;0" calcMode="linear" />
+<rect x="597" y="97" width=" 
       .mainText { 
         animation: 
           revealText 1.4s cubic-bezier(.16,1,.3,1) forwards, 
