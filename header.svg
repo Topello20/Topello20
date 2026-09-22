@@ -1,991 +1,146 @@
-voiwd9t7yLy+dPgqAM9KkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaOHLRBI3IXejaq3C5aVIDn0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCANccB2fsCyCD6XxVtX63ww7uIohpw6n1XDdLMgO1XYg2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBiYZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmZmY2NjYzUzLWRlZmYtNDBlYy05OTY1LThlYTY4ZDU5MzM4MS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQ0NGVmNTU0LTJkNTYtNDQ5NS1iNTliLTg2YTE0MjgzNm<svg width="100%" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">   <defs> <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"> 
-
-  <stop offset="0%" stop-color="#05070B"/> 
-
-  <stop offset="50%" stop-color="#0B101A"/> 
-
-  <stop offset="100%" stop-color="#040509"/> 
-
-</linearGradient> 
-
-
-
-<linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%"> 
-
-  <stop offset="0%" stop-color="#2563EB"/> 
-
-  <stop offset="50%" stop-color="#60A5FA"/> 
-
-  <stop offset="100%" stop-color="#2563EB"/> 
-
-</linearGradient> 
-
-
-
-<linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="0%"> 
-
-  <stop offset="0%" stop-color="#E2E8F0"/> 
-
-  <stop offset="50%" stop-color="#FFFFFF"/> 
-
-  <stop offset="100%" stop-color="#CBD5E1"/> 
-
-</linearGradient> 
-
-
-
-<filter id="glow"> 
-
-  <feGaussianBlur stdDeviation="7" result="blur"/> 
-
-  <feMerge> 
-
-    <feMergeNode in="blur"/> 
-
-    <feMergeNode in="SourceGraphic"/> 
-
-  </feMerge> 
-
-</filter> 
-
-
-
-<filter id="softGlow"> 
-
-  <feGaussianBlur stdDeviation="18"/> 
-
-</filter> 
-
-
-
-<pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"> 
-
-  <path 
-
-    d="M50 0H0V50" 
-
-    fill="none" 
-
-    stroke="#FFFFFF" 
-
-    stroke-opacity="0.025" 
-
-  /> 
-
-</pattern> 
-
-
-
-<linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%"> 
-
-  <stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/> 
-
-  <stop offset="45%" stop-color="#60A5FA" stop-opacity="0.15"/> 
-
-  <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1"/> 
-
-  <stop offset="55%" stop-color="#60A5FA" stop-opacity="0.15"/> 
-
-  <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/> 
-
-</linearGradient> 
-
-
-
-<clipPath id="textClip"> 
-
-  <text 
-
-    x="500" 
-
-    y="154" 
-
-    text-anchor="middle" 
-
-    font-family="Segoe UI, Inter, Arial, sans-serif" 
-
-    font-size="68" 
-
-    font-weight="700" 
-
-    letter-spacing="9" 
-
-  > 
-
-    TEMITOPE 
-
-  </text> 
-
-</clipPath> 
-
-
-
-<style> 
-
-
-
-  .mainText { 
-
-    animation: 
-
-      revealText 1.4s cubic-bezier(.16,1,.3,1) forwards, 
-
-      breathe 5s ease-in-out 2.2s infinite; 
-
-    transform-origin: 500px 145px; 
-
-  } 
-
-
-
-  .ghost { 
-
-    animation: ghostIn 1.5s ease-out forwards; 
-
-  } 
-
-
-
-  .subtitle { 
-
-    animation: subtitleIn 1s ease-out 1.5s forwards; 
-
-    opacity: 0; 
-
-  } 
-
-
-
-  .scanner { 
-
-    animation: scan 2.2s cubic-bezier(.65,0,.35,1) 0.5s forwards; 
-
-  } 
-
-
-
-  .scannerGlow { 
-
-    animation: scanGlow 2.2s cubic-bezier(.65,0,.35,1) 0.5s forwards; 
-
-  } 
-
-
-
-  .particle1 { 
-
-    animation: particle 3s ease-in-out 1.7s infinite; 
-
-  } 
-
-
-
-  .particle2 { 
-
-    animation: particle 4s ease-in-out 2s infinite; 
-
-  } 
-
-
-
-  .particle3 { 
-
-    animation: particle 3.5s ease-in-out 2.3s infinite; 
-
-  } 
-
-
-
-  .ui { 
-
-    animation: uiIn 1s ease-out 1.8s forwards; 
-
-    opacity: 0; 
-
-  } 
-
-
-
-  .indicator { 
-
-    animation: blink 2s ease-in-out 2s infinite; 
-
-  } 
-
-
-
-  @keyframes revealText { 
-
-
-
-    0% { 
-
-      opacity: 0; 
-
-      transform: scale(1.18); 
-
-      filter: blur(14px); 
-
-      letter-spacing: 18px; 
-
-    } 
-
-
-
-    35% { 
-
-      opacity: 0.65; 
-
-      filter: blur(5px); 
-
-    } 
-
-
-
-    70% { 
-
-      opacity: 1; 
-
-      filter: blur(0); 
-
-      letter-spacing: 11px; 
-
-    } 
-
-
-
-    100% { 
-
-      opacity: 1; 
-
-      transform: scale(1); 
-
-      filter: blur(0); 
-
-      letter-spacing: 9px; 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes breathe { 
-
-
-
-    0%, 100% { 
-
-      transform: scale(1); 
-
-    } 
-
-
-
-    50% { 
-
-      transform: scale(1.012); 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes ghostIn { 
-
-
-
-    0% { 
-
-      opacity: 0; 
-
-      letter-spacing: 20px; 
-
-      filter: blur(10px); 
-
-    } 
-
-
-
-    45% { 
-
-      opacity: 0.08; 
-
-    } 
-
-
-
-    100% { 
-
-      opacity: 0.025; 
-
-      letter-spacing: 9px; 
-
-      filter: blur(0); 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes subtitleIn { 
-
-
-
-    0% { 
-
-      opacity: 0; 
-
-      transform: translateY(8px); 
-
-    } 
-
-
-
-    100% { 
-
-      opacity: 1; 
-
-      transform: translateY(0); 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes scan { 
-
-
-
-    0% { 
-
-      transform: translateX(-70px); 
-
-      opacity: 0; 
-
-    } 
-
-
-
-    10% { 
-
-      opacity: 1; 
-
-    } 
-
-
-
-    90% { 
-
-      opacity: 1; 
-
-    } 
-
-
-
-    100% { 
-
-      transform: translateX(1070px); 
-
-      opacity: 0; 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes scanGlow { 
-
-
-
-    0% { 
-
-      transform: translateX(-100px); 
-
-      opacity: 0; 
-
-    } 
-
-
-
-    15% { 
-
-      opacity: 0.7; 
-
-    } 
-
-
-
-    85% { 
-
-      opacity: 0.7; 
-
-    } 
-
-
-
-    100% { 
-
-      transform: translateX(1100px); 
-
-      opacity: 0; 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes particle { 
-
-
-
-    0%, 100% { 
-
-      opacity: 0.15; 
-
-      transform: translateY(0); 
-
-    } 
-
-
-
-    50% { 
-
-      opacity: 0.9; 
-
-      transform: translateY(-7px); 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes uiIn { 
-
-
-
-    0% { 
-
-      opacity: 0; 
-
-      transform: translateY(5px); 
-
-    } 
-
-
-
-    100% { 
-
-      opacity: 1; 
-
-      transform: translateY(0); 
-
-    } 
-
-
-
-  } 
-
-
-
-  @keyframes blink { 
-
-
-
-    0%, 100% { 
-
-      opacity: 0.25; 
-
-    } 
-
-
-
-    50% { 
-
-      opacity: 1; 
-
-    } 
-
-
-
-  } 
-
-
-
+<svg width="100%" height="250" viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C0E12"/>
+      <stop offset="50%" stop-color="#12161C"/>
+      <stop offset="100%" stop-color="#0B0D10"/>
+    </linearGradient>
+
+    <linearGradient id="platinum" x1="0%" y1="0%" x2="100%">
+      <stop offset="0%" stop-color="#D6DCE2"/>
+      <stop offset="50%" stop-color="#F2F4F7"/>
+      <stop offset="100%" stop-color="#B9C2CC"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern id="grid" width="45" height="45" patternUnits="userSpaceOnUse">
+      <path d="M45 0 L0 0 0 45" stroke="#FFFFFF05" fill="none"/>
+    </pattern>
+
+    <pattern id="mesh" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M0 0 L90 0 L90 90 L0 90 Z" fill="none" stroke="#FFFFFF14" stroke-width="1"/>
+      <path d="M0 45 L90 45" stroke="#FFFFFF10"/>
+      <path d="M45 0 L45 90" stroke="#FFFFFF10"/>
+      <circle cx="45" cy="45" r="1.3" fill="#FFFFFF20"/>
+    </pattern>
+
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2"/>
+      <feColorMatrix type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 .02 0"/>
+    </filter>
+
+    <!-- Fade border -->
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D6DCE2" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#D6DCE2" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#D6DCE2" stop-opacity="0.7"/>
+      <stop offset="80%" stop-color="#D6DCE2" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#D6DCE2" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Star twinkling animations -->
+    <style>
+      @keyframes twinkle1 { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }
+      @keyframes twinkle2 { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+      @keyframes twinkle3 { 0%, 100% { opacity: 0.5; } 30% { opacity: 1; } 70% { opacity: 0.1; } }
+      .star1 { animation: twinkle1 3.5s infinite ease-in-out; }
+      .star2 { animation: twinkle2 4.2s infinite ease-in-out; }
+      .star3 { animation: twinkle3 2.8s infinite ease-in-out; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect width="100%" height="100%" fill="url(#mesh)" opacity="0.55"/>
+  <rect width="100%" height="100%" fill="url(#grid)" opacity="0.5"/>
+  <rect width="100%" height="100%" filter="url(#noise)" opacity="0.25"/>
+
+  <!-- Diagonal sweep -->
+  <rect x="-300" y="0" width="220" height="260"
+        fill="#FFFFFF"
+        opacity="0.03"
+        transform="skewX(-20)">
+    <animate attributeName="x" from="-300" to="1200" dur="7s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Corners -->
+  <path d="M30 35 L30 18 L56 18" stroke="#D6DCE2" stroke-width="1.5" fill="none"/>
+  <path d="M970 35 L970 18 L944 18" stroke="#D6DCE2" stroke-width="1.5" fill="none"/>
+  <path d="M30 215 L30 232 L56 232" stroke="#D6DCE2<svg width="100%" height="300" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#05070B"/><stop offset="50%" stop-color="#0B101A"/><stop offset="100%" stop-color="#040509"/></linearGradient>
+<linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2563EB"/><stop offset="50%" stop-color="#60A5FA"/><stop offset="100%" stop-color="#2563EB"/></linearGradient>
+<linearGradient id="text" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#E2E8F0"/><stop offset="50%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="softGlow"><feGaussianBlur stdDeviation="18"/></filter>
+<pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" fill="none" stroke="#FFFFFF" stroke-opacity="0.025"/></pattern>
+<linearGradient id="scan" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#60A5FA" stop-opacity="0"/><stop offset="45%" stop-color="#60A5FA" stop-opacity="0.15"/><stop offset="50%" stop-color="#FFFFFF" stop-opacity="1"/><stop offset="55%" stop-color="#60A5FA" stop-opacity="0.15"/><stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/></linearGradient>
+<clipPath id="textClip"><text x="500" y="154" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="9">TEMITOPE</text></clipPath>
+<style>
+.mainText{animation:revealText 1.4s cubic-bezier(.16,1,.3,1) forwards,breathe 5s ease-in-out 2.2s infinite;transform-origin:500px 145px}
+.ghost{animation:ghostIn 1.5s ease-out forwards}
+.subtitle{animation:subtitleIn 1s ease-out 1.5s forwards;opacity:0}
+.scanner{animation:scan 2.2s cubic-bezier(.65,0,.35,1) .5s forwards}
+.scannerGlow{animation:scanGlow 2.2s cubic-bezier(.65,0,.35,1) .5s forwards}
+.particle1{animation:particle 3s ease-in-out 1.7s infinite}
+.particle2{animation:particle 4s ease-in-out 2s infinite}
+.particle3{animation:particle 3.5s ease-in-out 2.3s infinite}
+.ui{animation:uiIn 1s ease-out 1.8s forwards;opacity:0}
+.indicator{animation:blink 2s ease-in-out 2s infinite}
+@keyframes revealText{0%{opacity:0;transform:scale(1.18);filter:blur(14px);letter-spacing:18px}35%{opacity:.65;filter:blur(5px)}70%{opacity:1;filter:blur(0);letter-spacing:11px}100%{opacity:1;transform:scale(1);filter:blur(0);letter-spacing:9px}}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
+@keyframes ghostIn{0%{opacity:0;letter-spacing:20px;filter:blur(10px)}45%{opacity:.08}100%{opacity:.025;letter-spacing:9px;filter:blur(0)}}
+@keyframes subtitleIn{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes scan{0%{transform:translateX(-70px);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateX(1070px);opacity:0}}
+@keyframes scanGlow{0%{transform:translateX(-100px);opacity:0}15%{opacity:.7}85%{opacity:.7}100%{transform:translateX(1100px);opacity:0}}
+@keyframes particle{0%,100%{opacity:.15;transform:translateY(0)}50%{opacity:.9;transform:translateY(-7px)}}
+@keyframes uiIn{0%{opacity:0;transform:translateY(5px)}100%{opacity:1;transform:translateY(0)}}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
 </style>
-
-  </defs> <rect
-
-width="1000" 
-
-height="300" 
-
-fill="url(#bg)"
-
-/>
-
-<rect
-
-width="1000" 
-
-height="300" 
-
-fill="url(#grid)"
-
-/>
-
-<ellipse
-
-cx="500" 
-
-cy="140" 
-
-rx="330" 
-
-ry="105" 
-
-fill="#2563EB" 
-
-opacity="0.055" 
-
-filter="url(#softGlow)"
-
-/>
-
-<text
-
-class="ghost" 
-
-x="500" 
-
-y="154" 
-
-text-anchor="middle" 
-
-font-family="Segoe UI, Inter, Arial, sans-serif" 
-
-font-size="68" 
-
-font-weight="700" 
-
-letter-spacing="9" 
-
-fill="#60A5FA"
-
-> 
-
-TEMITOPE
-
-  </text> <circle
-
-class="particle1" 
-
-cx="145" 
-
-cy="108" 
-
-r="2" 
-
-fill="#60A5FA"
-
-/>
-
-<circle
-
-class="particle2" 
-
-cx="850" 
-
-cy="92" 
-
-r="1.5" 
-
-fill="#93C5FD"
-
-/>
-
-<circle
-
-class="particle3" 
-
-cx="790" 
-
-cy="210" 
-
-r="2" 
-
-fill="#60A5FA"
-
-/>
-
-<circle
-
-cx="210" 
-
-cy="215" 
-
-r="1" 
-
-fill="#60A5FA" 
-
-opacity="0.35"
-
-/>
-
-<circle
-
-cx="890" 
-
-cy="145" 
-
-r="1" 
-
-fill="#93C5FD" 
-
-opacity="0.4"
-
-/>
-
-<g
-
-class="ui" 
-
-font-family="Segoe UI, Inter, Arial, sans-serif" 
-
-fill="#64748B"
-
-> 
-
-<text 
-
-  x="72" 
-
-  y="70" 
-
-  font-size="10" 
-
-  letter-spacing="3" 
-
-> 
-
-  01 / PROFILE 
-
-</text> 
-
-
-
-<text 
-
-  x="72" 
-
-  y="84" 
-
-  font-size="8" 
-
-  letter-spacing="2" 
-
-  fill="#334155" 
-
-> 
-
-  IDENTITY 
-
-</text> 
-
-
-
-<text 
-
-  x="928" 
-
-  y="70" 
-
-  text-anchor="end" 
-
-  font-size="10" 
-
-  letter-spacing="3" 
-
-> 
-
-  2026 
-
-</text> 
-
-
-
-<text 
-
-  x="928" 
-
-  y="84" 
-
-  text-anchor="end" 
-
-  font-size="8" 
-
-  letter-spacing="2" 
-
-  fill="#334155" 
-
-> 
-
-  BUILDING 
-
-</text>
-
-  </g> <text
-
-class="mainText" 
-
-x="500" 
-
-y="154" 
-
-text-anchor="middle" 
-
-font-family="Segoe UI, Inter, Arial, sans-serif" 
-
-font-size="68" 
-
-font-weight="700" 
-
-letter-spacing="9" 
-
-fill="url(#text)"
-
-> 
-
-TEMITOPE
-
-  </text> <rect
-
-class="scannerGlow" 
-
-x="-100" 
-
-y="55" 
-
-width="80" 
-
-height="180" 
-
-fill="#60A5FA" 
-
-opacity="0" 
-
-filter="url(#softGlow)"
-
-/>
-
-<rect
-
-class="scanner" 
-
-x="-70" 
-
-y="45" 
-
-width="1.5" 
-
-height="210" 
-
-fill="url(#scan)" 
-
-opacity="0" 
-
-filter="url(#glow)"
-
-/>
-
-<rect
-
-x="375" 
-
-y="176" 
-
-width="250" 
-
-height="1.5" 
-
-rx="1" 
-
-fill="url(#blue)" 
-
-opacity="0.65"
-
-> 
-
-<animate 
-
-  attributeName="width" 
-
-  values="80;250;190;250" 
-
-  dur="4s" 
-
-  begin="1.6s" 
-
-  repeatCount="indefinite" 
-
-/> 
-
-
-
-<animate 
-
-  attributeName="x" 
-
-  values="460;375;405;375" 
-
-  dur="4s" 
-
-  begin="1.6s" 
-
-  repeatCount="indefinite" 
-
-/>
-
-  </rect> <text
-
-class="subtitle" 
-
-x="500" 
-
-y="207" 
-
-text-anchor="middle" 
-
-font-family="Segoe UI, Inter, Arial, sans-serif" 
-
-font-size="13" 
-
-letter-spacing="5" 
-
-fill="#94A3B8"
-
-> 
-
-SOFTWARE • CREATIVE • LEARNING
-
-  </text> <g
-
-class="ui" 
-
-font-family="Segoe UI, Inter, Arial, sans-serif"
-
-> 
-
-<circle 
-
-  class="indicator" 
-
-  cx="463" 
-
-  cy="238" 
-
-  r="2.5" 
-
-  fill="#60A5FA" 
-
-/> 
-
-
-
-<text 
-
-  x="474" 
-
-  y="241" 
-
-  font-size="8" 
-
-  letter-spacing="2" 
-
-  fill="#64748B" 
-
-> 
-
-  BUILDING 
-
-</text>
-
-  </g> <line
-
-x1="160" 
-
-y1="265" 
-
-x2="840" 
-
-y2="265" 
-
-stroke="url(#blue)" 
-
-stroke-width="1" 
-
-opacity="0.18"
-
-/>
-
-<path
-
-d="M70 245V255H80" 
-
-fill="none" 
-
-stroke="#2563EB" 
-
-stroke-width="1" 
-
-opacity="0.45"
-
-/>
-
-<path
-
-d="M930 245V255H920" 
-
-fill="none" 
-
-stroke="#2563EB" 
-
-stroke-width="1" 
-
-opacity="0.45"
-
-/>
-
-</svg>  This one oolues="0.5;0.5;0;0;0.5;0.5;0;0" calcMode="linear" /></rect>
-<g id="dotted">
-<g opacity="0"><animate attributeName="opacity" dur="15.936s" repeatCount="indefinite" keyTimes="0;0.0374;0.0405;0.4426;0.4511;0.4596;0.4681;0.4765;0.4878;0.4991;0.656;0.6645;0.6701;0.6786;0.6871;0.6955;0.7125;0.9329;0.9354;1" values="0;0;1;1;0.55;0.85;0.2;0.6;0.1;0;0;0.45;0.05;0.75;0.25;0.9;1;1;0;0" calcMode="linear" />
-<rect x="177" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
-<rect x="189" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
-<rect x="201" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
-<rect x="201" y="109" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
-<rect x="201" y="121" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
-<rect x="201" y="133" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
-<rect x="201" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
+</defs>
+<rect width="1000" height="300" fill="url(#bg)"/>
+<rect width="1000" height="300" fill="url(#grid)"/>
+<ellipse cx="500" cy="140" rx="330" ry="105" fill="#2563EB" opacity=".055" filter="url(#softGlow)"/>
+<text class="ghost" x="500" y="154" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="9" fill="#60A5FA">TEMITOPE</text>
+<circle class="particle1" cx="145" cy="108" r="2" fill="#60A5FA"/>
+<circle class="particle2" cx="850" cy="92" r="1.5" fill="#93C5FD"/>
+<circle class="particle3" cx="790" cy="210" r="2" fill="#60A5FA"/>
+<circle cx="210" cy="215" r="1" fill="#60A5FA" opacity=".35"/>
+<circle cx="890" cy="145" r="1" fill="#93C5FD" opacity=".4"/>
+<g class="ui" font-family="Segoe UI, Inter, Arial, sans-serif" fill="#64748B">
+<text x="72" y="70" font-size="10" letter-spacing="3">01 / PROFILE</text>
+<text x="72" y="84" font-size="8" letter-spacing="2" fill="#334155">IDENTITY</text>
+<text x="928" y="70" text-anchor="end" font-size="10" letter-spacing="3">2026</text>
+<text x="928" y="84" text-anchor="end" font-size="8" letter-spacing="2" fill="#334155">BUILDING</text>
+</g>
+<text class="mainText" x="500" y="154" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="9" fill="url(#text)">TEMITOPE</text>
+<rect class="scannerGlow" x="-100" y="55" width="80" height="180" fill="#60A5FA" opacity="0" filter="url(#softGlow)"/>
+<rect class="scanner" x="-70" y="45" width="1.5" height="210" fill="url(#scan)" opacity="0" filter="url(#glow)"/>
+<rect x="375" y="176" width="250" height="1.5" rx="1" fill="url(#blue)" opacity=".65">
+<animate attributeName="width" values="80;250;190;250" dur="4s" begin="1.6s" repeatCount="indefinite"/>
+<animate attributeName="x" values="460;375;405;375" dur="4s" begin="1.6s" repeatCount="indefinite"/>
+</rect>
+<text class="subtitle" x="500" y="207" text-anchor="middle" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="13" letter-spacing="5" fill="#94A3B8">SOFTWARE • CREATIVE • LEARNING</text>
+<g class="ui" font-family="Segoe UI, Inter, Arial, sans-serif">
+<circle class="indicator" cx="463" cy="238" r="2.5" fill="#60A5FA"/>
+<text x="474" y="241" font-size="8" letter-spacing="2" fill="#64748B">BUILDING</text>
+</g>
+<line x1="160" y1="265" x2="840" y2="265" stroke="url(#blue)" stroke-width="1" opacity=".18"/>
+<path d="M70 245V255H80" fill="none" stroke="#2563EB" stroke-width="1" opacity=".45"/>
+<path d="M930 245V255H920" fill="none" stroke="#2563EB" stroke-width="1" opacity=".45"/>
+</svg>ect x="201" y="145" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
 <rect x="201" y="157" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
 <rect x="201" y="169" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
 <rect x="213" y="97" width="10" height="10" rx="3" fill="#60A5FA" filter="url(#glow)"/>
