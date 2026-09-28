@@ -85,7 +85,7 @@
   </text>  
   
   <text class="msg" x="790" y="62" opacity="0">  
-    FRONTEND  
+    FRONTEND/FULLSTACK
     <animate attributeName="opacity" values="0;1" dur=".5s" begin=".6s" fill="freeze"/>  
     <animateTransform attributeName="transform" type="translate" from="70 -25" to="0 0" dur=".8s" begin=".6s" fill="freeze"/>  
   </text>  
@@ -102,8 +102,8 @@
     <animateTransform attributeName="transform" type="translate" from="65 20" to="0 0" dur=".8s" begin="1.4s" fill="freeze"/>  
   </text>  
   
-  <text class="small" x="285" y="55" opacity="0">  
-    HTML • CSS • JS  
+  <text class="small" x="285" y="55" opacity="0">
+    HTML • CSS • JS • TS
     <animate attributeName="opacity" values="0;1" dur=".5s" begin="1.8s" fill="freeze"/>  
     <animateTransform attributeName="transform" type="translate" from="0 -30" to="0 0" dur=".7s" begin="1.8s" fill="freeze"/>  
   </text>  
